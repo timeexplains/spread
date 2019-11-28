@@ -1,4 +1,7 @@
 
+
+
+
 <template>
   <el-container style="height: 500px; border: 1px solid #eee">
     <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
@@ -100,13 +103,17 @@
         address: 'No. 189, Grove St, Los Angeles'
       };
       return {
-        tableData: Array(20).fill(item)
+        tableData: Array(20).fill(item),
+        activeIndex: '1',
+        activeIndex2: '1'
       }
     },
     methods: {
       go(){
         this.$router.push('/aaa')
+      },
+      handleSelect(key, keyPath) {
+        console.log(key, keyPath);
       }
-    }
-  };
+  }};
 </script>
